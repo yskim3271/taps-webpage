@@ -454,17 +454,6 @@
   align-items: center;
 }
 
-.audio-pair-title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #ff3e00;
-  border-radius: 4px;
-}
-
 @media (max-width: 768px) {
   .audio-samples-wrapper {
     flex-direction: column;
@@ -481,7 +470,7 @@
   
   .audio-pair-title {
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
   }
 }
 
