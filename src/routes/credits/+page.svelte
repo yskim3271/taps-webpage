@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
   import CitationBox from '$lib/components/CitationBox.svelte';
   
   let pageTitle = 'Credits & Citation';
@@ -14,9 +13,6 @@
       url={https://arxiv.org/abs/2502.11478}, 
 }`;
 
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Dataset`;
-  });
 </script>
 
 <svelte:head>

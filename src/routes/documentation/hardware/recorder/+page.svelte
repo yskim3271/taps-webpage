@@ -1,13 +1,13 @@
 <script>
-  import { onMount } from 'svelte';
   import { base } from '$app/paths';
   
   let pageTitle = 'Recorder';
   
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Documentation`;
-  });
 </script>
+
+<svelte:head>
+  <title>{pageTitle} | TAPS Dataset</title>
+</svelte:head>
 
 <div class="page-container">
   <div class="page-header">

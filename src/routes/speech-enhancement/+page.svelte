@@ -1,11 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
   
   let pageTitle = 'Speech Enhancement';
   
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Dataset`;
-  });
 </script>
 
 <svelte:head>

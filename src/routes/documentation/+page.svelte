@@ -1,11 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Documentation';
-  
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Documentation`;
-  });
 </script>
 
 <svelte:head>

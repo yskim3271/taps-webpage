@@ -1,11 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
   
   let pageTitle = 'Dataset Examples';
   
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Dataset`;
-  });
 </script>
 
 <svelte:head>

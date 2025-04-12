@@ -1,12 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
   
   let pageTitle = 'Ethical Declaration';
   
-  onMount(() => {
-    document.title = `${pageTitle} | TAPS Documentation`;
-  });
 </script>
+
+<svelte:head>
+  <title>{pageTitle} | TAPS Dataset</title>
+</svelte:head>
 
 <div class="page-container">
   <div class="page-header">
