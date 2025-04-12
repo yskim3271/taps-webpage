@@ -3,7 +3,6 @@
   
   let pageTitle = 'Dataset Examples';
   
-  // 음성 파일 샘플 데이터 (실제 존재하는 파일로 수정)
   const audioSamples = [
     {
       id: 1,
@@ -43,7 +42,7 @@
   
   <div class="content-section">
     <p>
-      Explore a sample of the TAPS dataset through the interactive Hugging Face viewer. This preview features synchronized recordings from throat and acoustic microphones, along with relevant metadata such as speaker information and transcriptions.
+      Explore a sample of the TAPS dataset.
     </p>
     
     <h2>Audio Samples</h2>
