@@ -115,7 +115,7 @@
     },
     { id: 'example', icon: 'headphones', label: 'Example audio samples', number: 2, path: '/example', expandable: false },
     { id: 'task', icon: 'database', label: 'Speech enhancement', number: 3, path: '/speech-enhancement', expandable: false },
-    { id: 'credits', icon: 'users', label: 'Credits & ciatation', number: 4, path: '/credits', expandable: false },
+    { id: 'credits', icon: 'users', label: 'Credits & citation', number: 4, path: '/credits', expandable: false },
     { id: 'license', icon: 'file-text', label: 'License', number: 5, path: '/license', expandable: false }
   ];
   
