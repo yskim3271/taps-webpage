@@ -1,6 +1,7 @@
 <script>
   import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   import '$lib/styles/style.css';
 
   // 현재 활성화된 메뉴 항목 설정
@@ -8,12 +9,12 @@
   
   function getActiveItem(path) {
     // 경로에 따라 활성 항목 결정
-    if (path === '/') return 'home';
-    if (path.includes('/documentation')) return 1;
-    if (path.includes('/example')) return 2;
-    if (path.includes('/speech-enhancement')) return 3;
-    if (path.includes('/credits')) return 4;
-    if (path.includes('/license')) return 5;
+    if (path === base + '/' || path === base) return 'home';
+    if (path.includes(base + '/documentation')) return 1;
+    if (path.includes(base + '/example')) return 2;
+    if (path.includes(base + '/speech-enhancement')) return 3;
+    if (path.includes(base + '/credits')) return 4;
+    if (path.includes(base + '/license')) return 5;
     return 1; // 기본값
   }
 </script>

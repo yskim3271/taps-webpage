@@ -2,6 +2,7 @@
   import { slide } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   
   export let activeItem = 1; // 기본값 1번(About)
   
@@ -28,13 +29,13 @@
   function autoExpandCurrentPath(currentPath) {
     // 메인 메뉴 아이템 확인
     menuItems.forEach(item => {
-      if (item.expandable && currentPath.startsWith(item.path)) {
+      if (item.expandable && currentPath.startsWith(base + item.path)) {
         expandedItems[item.id] = true;
         
         // 하위 메뉴 아이템 확인
         if (item.subItems) {
           item.subItems.forEach(subItem => {
-            if (subItem.expandable && currentPath.startsWith(subItem.path)) {
+            if (subItem.expandable && currentPath.startsWith(base + subItem.path)) {
               expandedItems[subItem.id] = true;
             }
           });
@@ -72,7 +73,7 @@
       
       // SvelteKit의 goto 함수를 사용하여 클라이언트 사이드 내비게이션
       event.preventDefault(); // 기본 이벤트 방지
-      goto(item.path); // SvelteKit의 클라이언트 내비게이션 사용
+      goto(base + item.path); // SvelteKit의 클라이언트 내비게이션 사용
     }
   }
   
@@ -168,9 +169,9 @@
                       {#each subItem.subItems as nestedItem}
                         <li>
                           <a 
-                            href={nestedItem.path} 
+                            href="{base + nestedItem.path}" 
                             class="nested-sub-item"
-                            on:click|preventDefault={() => goto(nestedItem.path)}
+                            on:click|preventDefault={() => goto(base + nestedItem.path)}
                           >
                             {nestedItem.label}
                           </a>
@@ -182,9 +183,9 @@
               {:else}
                 <li>
                   <a 
-                    href={subItem.path} 
+                    href="{base + subItem.path}" 
                     class="sub-item"
-                    on:click|preventDefault={() => goto(subItem.path)}
+                    on:click|preventDefault={() => goto(base + subItem.path)}
                   >
                     {subItem.label}
                   </a>
@@ -195,9 +196,9 @@
         {/if}
       {:else}
         <a 
-          href="{item.path}" 
+          href="{base + item.path}" 
           class="nav-item {isActive(item) ? 'active' : ''}"
-          on:click|preventDefault={() => goto(item.path)}
+          on:click|preventDefault={() => goto(base + item.path)}
         >
           {#if item.id === 'home'}
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon">
