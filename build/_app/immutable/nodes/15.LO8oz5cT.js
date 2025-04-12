@@ -1,0 +1,7 @@
+import{t as c,a as d}from"../chunks/B4vrWiMv.js";import{i as p}from"../chunks/CbisBaCh.js";import{p as l,o as h,c as s,a as m,$ as u,r as o,n as g}from"../chunks/BaK_GqZH.js";import{h as v}from"../chunks/BPbRZzKw.js";var _=c(`<div class="page-container"><div class="page-header"><h1></h1></div> <div class="content-section"><p>Explore a sample of the TAPS dataset through the interactive Hugging Face viewer. This preview features synchronized recordings from throat and acoustic microphones, along with relevant metadata such as speaker information and transcriptions.</p> <h2>Accessing the Full Dataset</h2> <p>The complete TAPS dataset is available on Hugging Face and can be loaded easily with a few lines of code:</p> <div class="code-block"><pre><code>from datasets import load_dataset
+dataset = load_dataset("yskim3271/Throat_and_Acoustic_Pairing_Speech_Dataset")
+
+# Access a sample
+sample = dataset["train"][0]
+throat_audio = sample["audio.throat_microphone"]
+acoustic_audio = sample["audio.acoustic_microphone"]</code></pre></div> <a href="https://huggingface.co/datasets/yskim3271/Throat_and_Acoustic_Pairing_Speech_Dataset" target="_blank" rel="noopener noreferrer" class="link-button">Visit the full dataset on Hugging Face</a></div></div>`);function P(i,r){l(r,!1);let a="Dataset Examples";h(()=>{document.title=`${a} | TAPS Dataset`}),p();var e=_();v(f=>{u.title=`${a} | TAPS Dataset`});var t=s(e),n=s(t);n.textContent=a,o(t),g(2),o(e),d(i,e),m()}export{P as component};
