@@ -40,11 +40,7 @@
     <h1>{pageTitle}</h1>
   </div>
   
-  <div class="content-section">
-    <p>
-      Explore a sample of the TAPS dataset.
-    </p>
-    
+  <div class="content-section">   
     <h2>Audio Samples</h2>
     <p>
       Below are paired audio samples from the TAPS dataset. Each pair contains recordings from both acoustic and throat microphones for the same speech segment.
@@ -53,9 +49,10 @@
     
     <div class="audio-samples-container">
       {#each audioSamples as sample}
-        <div>
+        <div class="audio-pair">
           <h3 class="audio-pair-title">{sample.title}</h3>
-          <div class="audio-pair">
+          
+          <div class="audio-samples-wrapper">
             <div class="audio-sample">
               <h3>Acoustic Microphone</h3>
               <audio controls>
