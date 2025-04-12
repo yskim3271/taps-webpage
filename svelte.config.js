@@ -23,8 +23,7 @@ const config = {
 		},
 		prerender: {
 			handleHttpError: 'warn',
-			entries: ['*'],
-			default: true
+			entries: ['*']
 		}
 	}
 };
