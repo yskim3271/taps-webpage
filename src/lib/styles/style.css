@@ -404,16 +404,6 @@
   align-items: center;
 }
 
-.audio-sample h3::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background-color: #ff3e00;
-}
-
 .audio-sample audio {
   width: 100%;
   margin-bottom: 0;
@@ -444,12 +434,12 @@
 
 .audio-pair-title {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   font-size: 1.1rem;
   color: #231c1f;
   font-weight: 600;
   position: relative;
-  padding-left: 0.75rem;
+  padding-left: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -468,10 +458,6 @@
     margin-bottom: 0.75rem;
   }
   
-  .audio-pair-title {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-  }
 }
 
 
