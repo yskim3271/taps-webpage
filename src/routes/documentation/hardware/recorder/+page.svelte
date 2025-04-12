@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Recorder';
   
@@ -22,7 +23,7 @@
     </p>
 
     <div class="img-container">
-      <img src="/images/documentation/hardware/recorder/recorder.png" alt="Recorder" />
+      <img src="{base}/images/documentation/hardware/recorder/recorder.png" alt="Recorder" />
       <div class="image-caption">Recorder</div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Post-processing';
   
@@ -32,7 +33,7 @@
     To correct mismatches caused by timing differences between throat and acoustic microphone signals, synchronization adjustments were applied. This alignment step is crucial for training robust deep learning models.
     </p>
     <div class="img-container">
-    <img src="/images/documentation/post-processing/post-processing_1.png" alt="Timing alignment illustration showing cross-correlation" />
+    <img src="{base}/images/documentation/post-processing/post-processing_1.png" alt="Timing alignment illustration showing cross-correlation" />
     <div class="image-caption">Alignment of throat and acoustic microphone signals using cross-correlation</div>
     </div>
 
@@ -41,7 +42,7 @@
         Minor background noise in acoustic microphone recordings was removed using the pretrained causal version of the Demucs speech enhancement model.
     </p>
         <div class="img-container">
-        <img src="/images/documentation/post-processing/post-processing_2.png" alt="Noise reduction before and after comparison" />
+        <img src="{base}/images/documentation/post-processing/post-processing_2.png" alt="Noise reduction before and after comparison" />
         <div class="image-caption">Signal waveforms before and after noise enhancement</div>
         </div>
 

@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Acoustic Microphone';
   
@@ -30,7 +31,7 @@
     </ul>
 
     <div class="img-container">
-      <img src="/images/documentation/hardware/acoustic-mic/acoustic-mic.jpg" alt="Acoustic Microphone" style="max-width: 400px; height: auto;"/>
+      <img src="{base}/images/documentation/hardware/acoustic-mic/acoustic-mic.jpg" alt="Acoustic Microphone" style="max-width: 400px; height: auto;"/>
       <div class="image-caption">Acoustic Microphone</div>
     </div>
 

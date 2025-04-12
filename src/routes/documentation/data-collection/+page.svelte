@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Data Collection Software';
   
@@ -34,7 +35,7 @@
     </p>
     
     <div class="img-container">
-      <img src="/images/documentation/data-collection/software.png" alt="Data Collection" />
+      <img src="{base}/images/documentation/data-collection/software.png" alt="Data Collection" />
       <div class="image-caption">Data Collection Software</div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'TAPS DATASET';
   onMount(() => {
@@ -27,7 +28,7 @@
     </p>
 
     <div class="img-container">
-      <img src="/images/home.png" alt="Data Collection" style="max-width: 100%; height: auto;"/>
+      <img src="{base}/images/home.png" alt="Data Collection" style="max-width: 100%; height: auto;"/>
       <div class="image-caption">Throat and Acoustic Paired Data</div>
     </div>
 

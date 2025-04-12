@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   
   let pageTitle = 'Recording Setup';
   
@@ -24,7 +25,7 @@
     </p>
     
     <div class="img-container">
-      <img src="/images/documentation/recording/recording-setup/setup.png" alt="TAPS recording setup configuration" />
+      <img src="{base}/images/documentation/recording/recording-setup/setup.png" alt="TAPS recording setup configuration" />
       <div class="image-caption">Recording setup showing throat microphone and acoustic microphone configuration</div>
     </div>
     
