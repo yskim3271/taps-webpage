@@ -38,9 +38,19 @@ jobs:
         env:
           NODE_ENV: production
       
+      - name: List build directory
+        run: ls -la build
+      
       - name: Create 200.html
         run: |
-          cp build/index.html build/200.html
+          if [ -f "build/index.html" ]; then
+            cp build/index.html build/200.html
+          elif [ -f "build/200.html" ]; then
+            echo "200.html already exists"
+          else
+            echo "No index.html or 200.html found in build directory"
+            exit 1
+          fi
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
