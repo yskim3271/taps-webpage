@@ -10,21 +10,18 @@
       title: "Sample 1 - Korean Speech (p00_u00)",
       acousticFile: `${base}/audio/example/p00_u00_am.wav`,
       throatFile: `${base}/audio/example/p00_u00_tm.wav`,
-      description: "Korean speech sample from TAPS dataset"
     },
     {
       id: 2,
       title: "Sample 2 - Korean Speech (p02_u00)",
       acousticFile: `${base}/audio/example/p02_u00_am.wav`,
       throatFile: `${base}/audio/example/p02_u00_tm.wav`,
-      description: "Korean speech sample from TAPS dataset"
     },
     {
       id: 3,
       title: "Sample 3 - Korean Speech (p04_u00)",
       acousticFile: `${base}/audio/example/p04_u00_am.wav`,
       throatFile: `${base}/audio/example/p04_u00_tm.wav`,
-      description: "Korean speech sample from TAPS dataset"
     }
   ];
 </script>
@@ -46,30 +43,31 @@
     <h2>Audio Samples</h2>
     <p>
       Below are paired audio samples from the TAPS dataset. Each pair contains recordings from both acoustic and throat microphones for the same speech segment.
-      The acoustic microphone captures normal speech, while the throat microphone captures vibrations directly from the vocal cords, reducing background noise.
+      The acoustic microphone captures normal speech, while the throat microphone captures vibrations directly from the vocal cords.
     </p>
     
     <div class="audio-samples-container">
       {#each audioSamples as sample}
-        <div class="audio-pair">
+        <div>
           <h3 class="audio-pair-title">{sample.title}</h3>
-          
-          <div class="audio-sample">
-            <h3>Acoustic Microphone</h3>
-            <audio controls>
-              <source src={sample.acousticFile} type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-            <div class="audio-description">Standard acoustic microphone recording</div>
-          </div>
-          
-          <div class="audio-sample">
-            <h3>Throat Microphone</h3>
-            <audio controls>
-              <source src={sample.throatFile} type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-            <div class="audio-description">Throat microphone recording with reduced background noise</div>
+          <div class="audio-pair">
+            <div class="audio-sample">
+              <h3>Acoustic Microphone</h3>
+              <audio controls>
+                <source src={sample.acousticFile} type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <div class="audio-description">Standard acoustic microphone recording</div>
+            </div>
+            
+            <div class="audio-sample">
+              <h3>Throat Microphone</h3>
+              <audio controls>
+                <source src={sample.throatFile} type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <div class="audio-description">Throat microphone recording with reduced background noise</div>
+            </div>
           </div>
         </div>
       {/each}
