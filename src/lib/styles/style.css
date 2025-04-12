@@ -393,12 +393,6 @@
   margin-bottom: 0.5rem;
 }
 
-.audio-description {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
-}
-
 .audio-pair {
   display: flex;
   gap: 1.5rem;

@@ -7,21 +7,27 @@
   const audioSamples = [
     {
       id: 1,
-      title: "Sample 1 - Korean Speech (p00_u00)",
+      title: "Sample Speech Male 1",
       acousticFile: `${base}/audio/example/p00_u00_am.wav`,
       throatFile: `${base}/audio/example/p00_u00_tm.wav`,
     },
     {
       id: 2,
-      title: "Sample 2 - Korean Speech (p02_u00)",
+      title: "Sample Speech Male 2",
       acousticFile: `${base}/audio/example/p02_u00_am.wav`,
       throatFile: `${base}/audio/example/p02_u00_tm.wav`,
     },
     {
       id: 3,
-      title: "Sample 3 - Korean Speech (p04_u00)",
-      acousticFile: `${base}/audio/example/p04_u00_am.wav`,
-      throatFile: `${base}/audio/example/p04_u00_tm.wav`,
+      title: "Sample Speech Female 1",
+      acousticFile: `${base}/audio/example/p24_u00_am.wav`,
+      throatFile: `${base}/audio/example/p24_u00_tm.wav`,
+    },
+    {
+      id: 4,
+      title: "Sample Speech Female 2",
+      acousticFile: `${base}/audio/example/p26_u00_am.wav`,
+      throatFile: `${base}/audio/example/p26_u00_tm.wav`,
     }
   ];
 </script>
@@ -57,7 +63,6 @@
                 <source src={sample.acousticFile} type="audio/wav">
                 Your browser does not support the audio element.
               </audio>
-              <div class="audio-description">Standard acoustic microphone recording</div>
             </div>
             
             <div class="audio-sample">
@@ -66,7 +71,6 @@
                 <source src={sample.throatFile} type="audio/wav">
                 Your browser does not support the audio element.
               </audio>
-              <div class="audio-description">Throat microphone recording with reduced background noise</div>
             </div>
           </div>
         </div>
