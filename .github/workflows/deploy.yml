@@ -33,9 +33,14 @@ jobs:
           npm rebuild
       
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
         env:
           NODE_ENV: production
+      
+      - name: Create 200.html
+        run: |
+          cp build/index.html build/200.html
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

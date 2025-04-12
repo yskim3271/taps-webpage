@@ -14,7 +14,7 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
+			fallback: '200.html',
 			precompress: false
 		}),
 		paths: {
@@ -23,7 +23,8 @@ const config = {
 		},
 		prerender: {
 			handleHttpError: 'warn',
-			entries: ['*']
+			entries: ['*'],
+			default: true
 		}
 	}
 };
