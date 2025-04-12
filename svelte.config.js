@@ -18,10 +18,12 @@ const config = {
 			precompress: false
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/taps-webpage' : ''
+			base: process.env.NODE_ENV === 'production' ? '/taps-webpage' : '',
+			relative: false
 		},
 		prerender: {
-			handleHttpError: 'warn'
+			handleHttpError: 'warn',
+			entries: ['*']
 		}
 	}
 };
