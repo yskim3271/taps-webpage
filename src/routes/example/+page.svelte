@@ -3,28 +3,28 @@
   
   let pageTitle = 'Dataset Examples';
   
-  // 음성 파일 샘플 데이터
+  // 음성 파일 샘플 데이터 (실제 존재하는 파일로 수정)
   const audioSamples = [
     {
       id: 1,
-      title: "Sample 1 - Korean Speech",
+      title: "Sample 1 - Korean Speech (p00_u00)",
       acousticFile: `${base}/audio/example/p00_u00_am.wav`,
       throatFile: `${base}/audio/example/p00_u00_tm.wav`,
       description: "Korean speech sample from TAPS dataset"
     },
     {
       id: 2,
-      title: "Sample 2 - English Speech",
+      title: "Sample 2 - Korean Speech (p02_u00)",
       acousticFile: `${base}/audio/example/p02_u00_am.wav`,
       throatFile: `${base}/audio/example/p02_u00_tm.wav`,
-      description: "English speech sample from TAPS dataset"
+      description: "Korean speech sample from TAPS dataset"
     },
     {
       id: 3,
-      title: "Sample 3 - Noisy Environment",
+      title: "Sample 3 - Korean Speech (p04_u00)",
       acousticFile: `${base}/audio/example/p04_u00_am.wav`,
       throatFile: `${base}/audio/example/p04_u00_tm.wav`,
-      description: "Speech in noisy environment, showing noise reduction capabilities"
+      description: "Korean speech sample from TAPS dataset"
     }
   ];
 </script>
