@@ -434,14 +434,26 @@
 
 .audio-pair-title {
   width: 100%;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
   font-size: 1.1rem;
   color: #231c1f;
   font-weight: 600;
   position: relative;
-  padding-left: 0.5rem;
+  padding-left: 0.75rem;
   display: flex;
   align-items: center;
+}
+
+.audio-pair-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff3e00;
 }
 
 @media (max-width: 768px) {
