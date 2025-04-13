@@ -20,13 +20,20 @@
 <meta name="keywords" content={keywords} />
 <link rel="canonical" href={canonicalUrl} />
 
-<!-- 오픈 그래프 메타 태그 (페이스북, 카카오톡 등) -->
+<!-- 오픈 그래프 메타 태그 (페이스북, 카카오톡, 네이버 등) -->
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content="TAPS Dataset" />
+<meta property="og:locale" content="ko_KR" />
+
+<!-- 네이버 검색 결과 설정 -->
+<meta name="naver:title" content={title} />
+<meta name="naver:description" content={description} />
+<meta name="naver:image" content={ogImage} />
+<meta name="naver:article:author" content="POSTECH" />
 
 <!-- 트위터 카드 메타 태그 -->
 <meta name="twitter:card" content="summary_large_image" />
