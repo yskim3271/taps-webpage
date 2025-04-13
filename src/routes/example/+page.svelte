@@ -6,25 +6,25 @@
   const audioSamples = [
     {
       id: 1,
-      title: "Sample (Male 1)",
+      title: "Sample 1 (p00/u00, Male)",
       acousticFile: `${base}/audio/example/p00_u00_am.wav`,
       throatFile: `${base}/audio/example/p00_u00_tm.wav`,
     },
     {
       id: 2,
-      title: "Sample (Male 2)",
+      title: "Sample 2 (p02/u00, Male)",
       acousticFile: `${base}/audio/example/p02_u00_am.wav`,
       throatFile: `${base}/audio/example/p02_u00_tm.wav`,
     },
     {
       id: 3,
-      title: "Sample (Female 1)",
+      title: "Sample 3 (p24/u00, Female)",
       acousticFile: `${base}/audio/example/p24_u00_am.wav`,
       throatFile: `${base}/audio/example/p24_u00_tm.wav`,
     },
     {
       id: 4,
-      title: "Sample (Female 2)",
+      title: "Sample 4 (p26/u00, Female)",
       acousticFile: `${base}/audio/example/p26_u00_am.wav`,
       throatFile: `${base}/audio/example/p26_u00_tm.wav`,
     }

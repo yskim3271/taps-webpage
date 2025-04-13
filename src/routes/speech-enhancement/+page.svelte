@@ -1,5 +1,5 @@
 <script>
-  
+  import { base } from '$app/paths';
   let pageTitle = 'Speech Enhancement';
   
   // 오디오 샘플 데이터
@@ -22,7 +22,7 @@
   // 오디오 파일 URL 생성 함수
   function getAudioUrl(sampleId, modelData) {
     const { path, suffix } = modelData;
-    return `/audio/tmse/${path}/${sampleId}_${suffix}.wav`;
+    return `${base}/audio/tmse/${path}/${sampleId}_${suffix}.wav`;
   }
   
 </script>
