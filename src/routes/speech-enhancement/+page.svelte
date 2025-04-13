@@ -12,8 +12,8 @@
   
   // 각 모델 이름과 한글 설명
   const models = [
-    { id: 'tm', name: 'Throat Mic. (TM)', path: 'tm', suffix: 'TM' },
-    { id: 'am', name: 'Acoustic Mic. (AM)', path: 'am', suffix: 'AM' },
+    { id: 'tm', name: 'Throat Mic.', path: 'tm', suffix: 'TM' },
+    { id: 'am', name: 'Acoustic Mic.', path: 'am', suffix: 'AM' },
     { id: 'tstnn', name: 'TSTNN', path: 'tstnn', suffix: 'AM_hat' },
     { id: 'demucs', name: 'Demucs', path: 'demucs', suffix: 'AM_hat' },
     { id: 'seconformer', name: 'SE-Conformer', path: 'seconformer', suffix: 'AM_hat' }
