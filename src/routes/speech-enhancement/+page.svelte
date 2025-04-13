@@ -2,7 +2,53 @@
   
   let pageTitle = 'Speech Enhancement';
   
+  // 오디오 샘플 데이터
+  const samples = [
+    { id: 'p62_u00', title: 'Sample 1 (p62/u00, Female)' },
+    { id: 'p63_u00', title: 'Sample 2 (p63/u00, Female)' },
+    { id: 'p65_u00', title: 'Sample 3 (p65/u00, Male)' },
+    { id: 'p70_u00', title: 'Sample 4 (p70/u00, Male)' }
+  ];
+  
+  // 각 모델 이름과 한글 설명
+  const models = [
+    { id: 'tm', name: 'Throat Mic. (TM)', path: 'tm', suffix: 'TM' },
+    { id: 'am', name: 'Acoustic Mic. (AM)', path: 'am', suffix: 'AM' },
+    { id: 'tstnn', name: 'TSTNN', path: 'tstnn', suffix: 'AM_hat' },
+    { id: 'demucs', name: 'Demucs', path: 'demucs', suffix: 'AM_hat' },
+    { id: 'seconformer', name: 'SE-Conformer', path: 'seconformer', suffix: 'AM_hat' }
+  ];
+  
+  // 오디오 파일 URL 생성 함수
+  function getAudioUrl(sampleId, modelData) {
+    const { path, suffix } = modelData;
+    return `/audio/tmse/${path}/${sampleId}_${suffix}.wav`;
+  }
+  
 </script>
+
+<style>
+  /* 모델 출력을 세로로 배열 */
+  .audio-models-wrapper {
+    flex-direction: column;
+  }
+  
+  /* 세로로 배열된 오디오 샘플의 마진 조정 */
+  .audio-models-wrapper .audio-sample {
+    margin-bottom: 0.75rem;
+    width: 100%;
+  }
+  
+  .audio-models-wrapper .audio-sample:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .audio-models-wrapper {
+      flex-direction: column;
+    }
+  }
+</style>
 
 <svelte:head>
   <title>{pageTitle} | TAPS Dataset</title>
@@ -134,6 +180,42 @@
         </table>
       </div>
       
+    </div>
+    
+    <div class="audio-samples">
+      <h2>Audio Samples</h2>
+      <p>
+        Below are audio samples that demonstrate the performance comparison of throat microphone speech enhancement models. Each sample includes the original throat microphone (TM) recording, reference microphone (AM) recording,
+        and the processed results from three different models (TSTNN, Demucs, SE-Conformer).
+      </p>
+      
+      <div class="audio-samples-container">
+        {#each samples as sample}
+          <div class="audio-pair">
+            <h3 class="audio-pair-title">{sample.title}</h3>
+            
+            <!-- 원본 입력 (TM, AM) -->
+            <div class="audio-samples-wrapper">
+              {#each models.slice(0, 2) as model}
+                <div class="audio-sample">
+                  <h3>{model.name}</h3>
+                  <audio controls src={getAudioUrl(sample.id, model)}></audio>
+                </div>
+              {/each}
+            </div>
+            
+            <!-- 모델 출력 (TSTNN, Demucs, SE-Conformer) -->
+            <div class="audio-samples-wrapper audio-models-wrapper">
+              {#each models.slice(2) as model}
+                <div class="audio-sample">
+                  <h3>{model.name}</h3>
+                  <audio controls src={getAudioUrl(sample.id, model)}></audio>
+                </div>
+              {/each}
+            </div>
+          </div>
+        {/each}
+      </div>
     </div>
   </div>
 </div>
