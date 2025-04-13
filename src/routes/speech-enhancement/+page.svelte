@@ -1,6 +1,10 @@
 <script>
   import { base } from '$app/paths';
+  import SEO from '$lib/components/seo/SEO.svelte';
+  
   let pageTitle = 'Speech Enhancement';
+  let pageDescription = 'Throat Microphone Speech Enhancement using TAPS Dataset';
+  let pageKeywords = 'Speech Enhancement, Throat Microphone, Acoustic Microphone, TSTNN, Demucs, SE-Conformer';
   
   // 오디오 샘플 데이터
   const samples = [
@@ -51,7 +55,12 @@
 </style>
 
 <svelte:head>
-  <title>{pageTitle} | TAPS Dataset</title>
+  <SEO 
+    title={`${pageTitle} | TAPS Dataset`} 
+    description={pageDescription}
+    keywords={pageKeywords}
+    image="/images/home.png"
+  />
 </svelte:head>
 
 <div class="page-container">
