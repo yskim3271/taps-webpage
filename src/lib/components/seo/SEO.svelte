@@ -5,7 +5,7 @@
 
   export let title = 'TAPS Dataset';
   export let description = 'Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement';
-  export let keywords = 'TAPS, Dataset, Speech, Korean, Throat Microphone, Acoustic Microphone, Speech Enhancement, Deep Learning, Body-conducted Speech, Body-conducted Speech Enhancement, Body-conduction, Body-conduction Speech, Body-conduction Speech Enhancement';
+  export let keywords = 'TAPS, Dataset, Speech, Korean, Throat Microphone, Acoustic Microphone, Speech Enhancement, Deep Learning, Body-conducted Speech';
   export let image = `${base}/images/home.png`; // 대표 이미지 경로 (소셜 미디어용)
   export let type = 'website';
   export let url = '';
