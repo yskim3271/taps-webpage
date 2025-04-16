@@ -1,11 +1,17 @@
 <script>
   import { base } from '$app/paths';
+  import SEO from '$lib/components/seo/SEO.svelte';
   
   let pageTitle = 'Documentation';
+  let pageDescription = 'Comprehensive documentation for the TAPS Dataset, including hardware specifications, recording setup, data collection procedures, and post-processing methods. Essential guide for researchers working with throat and acoustic microphone speech data.';
 </script>
 
 <svelte:head>
-  <title>{pageTitle} | TAPS Dataset</title>
+  <SEO 
+    title={pageTitle}
+    description={pageDescription}
+    image="/images/documentation/overview.png"
+  />
 </svelte:head>
 
 <div class="page-container">

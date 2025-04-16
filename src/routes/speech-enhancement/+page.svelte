@@ -3,7 +3,7 @@
   import SEO from '$lib/components/seo/SEO.svelte';
   
   let pageTitle = 'Speech Enhancement';
-  let pageDescription = 'Throat Microphone Speech Enhancement using TAPS Dataset';
+  let pageDescription = 'Experience the power of speech enhancement using the TAPS Dataset. Compare original throat microphone recordings with enhanced versions using state-of-the-art models like TSTNN, Demucs, and SE-Conformer.';
   let pageKeywords = 'Speech Enhancement, Throat Microphone, Acoustic Microphone, TSTNN, Demucs, SE-Conformer';
   
   // 오디오 샘플 데이터
@@ -56,10 +56,9 @@
 
 <svelte:head>
   <SEO 
-    title={`${pageTitle} | TAPS Dataset`} 
+    title={pageTitle}
     description={pageDescription}
-    keywords={pageKeywords}
-    image="/images/home.png"
+    image="/images/speech-enhancement/overview.png"
   />
 </svelte:head>
 

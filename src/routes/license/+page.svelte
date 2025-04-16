@@ -1,11 +1,17 @@
 <script>
+  import { base } from '$app/paths';
+  import SEO from '$lib/components/seo/SEO.svelte';
   
-  let pageTitle = 'License Information';
-  
+  let pageTitle = 'License';
+  let pageDescription = 'License information for the TAPS Dataset. Learn about usage terms, distribution rights, and citation requirements for this valuable resource in speech enhancement research.';
 </script>
 
 <svelte:head>
-  <title>{pageTitle} | TAPS Dataset</title>
+  <SEO 
+    title={pageTitle}
+    description={pageDescription}
+    image="/images/home.png"
+  />
 </svelte:head>
 
 <div class="page-container">

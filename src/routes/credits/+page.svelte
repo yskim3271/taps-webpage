@@ -1,7 +1,10 @@
 <script>
   import CitationBox from '$lib/components/CitationBox.svelte';
+  import { base } from '$app/paths';
+  import SEO from '$lib/components/seo/SEO.svelte';
   
-  let pageTitle = 'Credits & Citation';
+  let pageTitle = 'Credits';
+  let pageDescription = 'Acknowledgements and credits for the TAPS Dataset project. Learn about the researchers, contributors, and institutions involved in creating this comprehensive throat and acoustic microphone speech dataset.';
   
   const tapsCitation = `@misc{kim2025tapsthroatacousticpaired,
       title={TAPS: Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement}, 
@@ -16,7 +19,11 @@
 </script>
 
 <svelte:head>
-  <title>{pageTitle} | TAPS Dataset</title>
+  <SEO 
+    title={pageTitle}
+    description={pageDescription}
+    image="/images/home.png"
+  />
 </svelte:head>
 
 <div class="page-container">

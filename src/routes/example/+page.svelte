@@ -1,7 +1,9 @@
 <script>
   import { base } from '$app/paths';
+  import SEO from '$lib/components/seo/SEO.svelte';
   
-  let pageTitle = 'Dataset Examples';
+  let pageTitle = 'Example';
+  let pageDescription = 'Explore practical examples and demonstrations of the TAPS Dataset in action. View sample recordings, compare throat and acoustic microphone signals, and understand the dataset\'s applications in speech enhancement research.';
   
   const audioSamples = [
     {
@@ -32,7 +34,11 @@
 </script>
 
 <svelte:head>
-  <title>{pageTitle} | TAPS Dataset</title>
+  <SEO 
+    title={pageTitle}
+    description={pageDescription}
+    image="/images/example/example.png"
+  />
 </svelte:head>
 
 <div class="page-container">
