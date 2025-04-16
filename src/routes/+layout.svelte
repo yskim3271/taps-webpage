@@ -1,14 +1,13 @@
 <script>
   import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
-  import SEO from '$lib/components/seo/SEO.svelte';
   import { page } from '$app/stores';
   import { base } from '$app/paths';
   import '$lib/styles/style.css';
 
-  // 기본 SEO 정보
-  let siteTitle = 'TAPS Dataset';
-  let siteDescription = 'Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement';
-  let siteKeywords = 'TAPS, Dataset, Speech, Korean, Throat Microphone, Acoustic Microphone, Speech Enhancement, Deep Learning, Body-conducted Speech, Body-conducted Speech Enhancement, Body-conduction, Body-conduction Speech, Body-conduction Speech Enhancement';
+  // 기본 SEO 정보를 export하여 다른 페이지에서 사용할 수 있게 함
+  export const siteTitle = 'TAPS Dataset';
+  export const siteDescription = 'Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement';
+  export const siteKeywords = 'TAPS, Dataset, Speech, Korean, Throat Microphone, Acoustic Microphone, Speech Enhancement, Deep Learning, Body-conducted Speech';
 
   // 현재 활성화된 메뉴 항목 설정
   $: activeItem = getActiveItem($page.url.pathname);
@@ -24,28 +23,6 @@
     return 1; // 기본값
   }
 </script>
-
-<svelte:head>
-  <SEO title={siteTitle} description={siteDescription} keywords={siteKeywords} />
-  
-  <!-- 구조화된 데이터 추가 -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    "name": "TAPS Dataset",
-    "description": "Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement",
-    "keywords": ["throat microphone", "acoustic microphone", "speech enhancement", "body-conducted speech", "body-conduction speech", "body-conducted speech enhancement", "body-conduction speech enhancement"],
-    "creator": {
-      "@type": "Organization",
-      "name": "POSTECH"
-    },
-    "citation": "https://arxiv.org/abs/2502.11478",
-    "license": "https://taps.postech.ac.kr/license",
-    "url": "https://taps.postech.ac.kr"
-  }
-  </script>
-</svelte:head>
 
 <div class="app-layout">
   <Sidebar {activeItem} />

@@ -473,3 +473,21 @@
 }
 
 
+.audio-models-wrapper {
+flex-direction: column;
+}
+
+.audio-models-wrapper .audio-sample {
+margin-bottom: 0.75rem;
+width: 100%;
+}
+
+.audio-models-wrapper .audio-sample:last-child {
+margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+.audio-models-wrapper {
+    flex-direction: column;
+}
+}

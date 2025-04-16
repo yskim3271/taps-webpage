@@ -31,34 +31,13 @@
   
 </script>
 
-<style>
-  /* 모델 출력을 세로로 배열 */
-  .audio-models-wrapper {
-    flex-direction: column;
-  }
-  
-  /* 세로로 배열된 오디오 샘플의 마진 조정 */
-  .audio-models-wrapper .audio-sample {
-    margin-bottom: 0.75rem;
-    width: 100%;
-  }
-  
-  .audio-models-wrapper .audio-sample:last-child {
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .audio-models-wrapper {
-      flex-direction: column;
-    }
-  }
-</style>
-
 <svelte:head>
+  <title>{pageTitle} | TAPS Dataset</title>
   <SEO 
     title={pageTitle}
     description={pageDescription}
     image="/images/speech-enhancement/overview.png"
+    keywords={pageKeywords}
   />
 </svelte:head>
 

@@ -7,10 +7,12 @@
 </script>
 
 <svelte:head>
+  <title>{pageTitle} | TAPS Dataset</title>
   <SEO 
     title={pageTitle}
     description={pageDescription}
     image="/images/home.png"
+    keywords={pageKeywords}
   />
 </svelte:head>
 

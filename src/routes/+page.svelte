@@ -3,14 +3,16 @@
   import SEO from '$lib/components/seo/SEO.svelte';
   
   let pageTitle = 'Home';
-  let pageDescription = 'TAPS Dataset: A comprehensive collection of paired throat and acoustic microphone recordings for speech enhancement research. Features 60 native Korean speakers, 15.3 hours of synchronized data, and optimized deep learning models.';
+  let pageDescription = 'TAPS Dataset, a comprehensive collection of paired throat and acoustic microphone recordings for speech enhancement research. Features 60 native Korean speakers, 15.3 hours of synchronized data, and optimized deep learning models.';
 </script>
 
 <svelte:head>
+  <title>{pageTitle} | TAPS Dataset</title>
   <SEO 
     title={pageTitle}
     description={pageDescription}
     image="/images/home.png"
+    keywords={pageKeywords}
   />
 </svelte:head>
 
