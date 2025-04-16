@@ -4,11 +4,6 @@
   import { base } from '$app/paths';
   import '$lib/styles/style.css';
 
-  // 기본 SEO 정보를 export하여 다른 페이지에서 사용할 수 있게 함
-  export const siteTitle = 'TAPS Dataset';
-  export const siteDescription = 'Throat and Acoustic Paired Speech Dataset for Deep Learning-Based Speech Enhancement';
-  export const siteKeywords = 'TAPS, Dataset, Speech, Korean, Throat Microphone, Acoustic Microphone, Speech Enhancement, Deep Learning, Body-conducted Speech';
-
   // 현재 활성화된 메뉴 항목 설정
   $: activeItem = getActiveItem($page.url.pathname);
   

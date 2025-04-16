@@ -24,7 +24,6 @@
     title={pageTitle}
     description={pageDescription}
     image="/images/home.png"
-    keywords={pageKeywords}
   />
 </svelte:head>
 

@@ -4,7 +4,6 @@
   
   let pageTitle = 'Speech Enhancement';
   let pageDescription = 'Experience the power of speech enhancement using the TAPS Dataset. Compare original throat microphone recordings with enhanced versions using state-of-the-art models like TSTNN, Demucs, and SE-Conformer.';
-  let pageKeywords = 'Speech Enhancement, Throat Microphone, Acoustic Microphone, TSTNN, Demucs, SE-Conformer';
   
   // 오디오 샘플 데이터
   const samples = [
@@ -37,7 +36,6 @@
     title={pageTitle}
     description={pageDescription}
     image="/images/speech-enhancement/overview.png"
-    keywords={pageKeywords}
   />
 </svelte:head>
 

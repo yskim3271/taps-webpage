@@ -39,7 +39,6 @@
     title={pageTitle}
     description={pageDescription}
     image="/images/example/example.png"
-    keywords={pageKeywords}
   />
 </svelte:head>
 
